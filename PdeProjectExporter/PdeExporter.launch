@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/PdeProjectExporter/src/org/niri/pde/ProjectExporter.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.niri.pde.ProjectExporter"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="${workspace_loc}/LedLightController/src D:/exportedSketch -main LedLightController.java -unwantedImports ledlightcontroller -excludedFiles Main.java"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PdeProjectExporter"/>
+</launchConfiguration>

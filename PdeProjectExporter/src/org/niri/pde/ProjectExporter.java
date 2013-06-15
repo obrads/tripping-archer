@@ -84,6 +84,7 @@ public class ProjectExporter
 		String destinationFolderPath = "";
 		int mode = 0;
 		HashSet<String> unwantedImports = new HashSet<String>();
+		boolean makeParentFolder = false;
 		for (int i = 0; i < args.length; i++) {
 			
 			if (args[i].startsWith("-")) {
@@ -111,6 +112,9 @@ public class ProjectExporter
 				if (args[i].equalsIgnoreCase("-excludedFiles")) {
 					mode = 5;
 				}
+				if (args[i].equalsIgnoreCase("-makeParentFolder")) {
+					makeParentFolder = true;
+				}
 				break;
 				
 			case 3:
@@ -131,13 +135,13 @@ public class ProjectExporter
 		}
 		makeUnwantedImportPatterns(unwantedImports);
 		File destinationFolder = new File(destinationFolderPath);
-		if (! mainFileName.equals("")) {
-			String sketchName = mainFileName.substring(0,
-					mainFileName.length() - 4);
-			if (destinationFolder.getName() != sketchName) {
+		if (! mainFileName.equals("") && makeParentFolder) {
+			String sketchName = mainFileName.substring(0, mainFileName.length() - 4);
+			if (! destinationFolder.getName().equals(sketchName)) {
 				destinationFolderPath += "/" + sketchName;
 			}
 		}
+		System.out.println(destinationFolderPath);
 		exportFolder(new File(sourceFolderPath), destinationFolderPath);
 	}
 
